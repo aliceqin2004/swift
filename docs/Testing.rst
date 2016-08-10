@@ -358,6 +358,12 @@ Other substitutions:
 * ``%{python}``: run the same Python interpreter that's being used to run the
   current ``lit`` test.
 
+* ``FileCheck``: like the LLVM ``FileCheck`` utility, but occurrences of full
+  paths to the source and build directories in the input text are replaced with
+  path-independent constants.
+
+* ``%raw-FileCheck``: the LLVM ``FileCheck`` utility.
+
 When writing a test where output (or IR, SIL) depends on the bitness of the
 target CPU, use this pattern::
 
